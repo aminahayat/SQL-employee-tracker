@@ -30,4 +30,4 @@ VALUES
     ('Squidward', 'Tentacles', 5, NULL),
     ('Homer', 'Simpson', 6, 5),
     ('Ned', 'Flanders', 7, NULL),
-    ('Peppa', 'Pig', 8, 7);   
+    ('Peppa', 'Pig', 8, 7);  
