@@ -272,4 +272,3 @@ db.query("SELECT * FROM employee", (err, res) => {
 } 
   
   letsStart()  
-    
