@@ -18,3 +18,17 @@ CREATE TABLE roles
     FOREIGN KEY (departmentid)
     REFERENCES department(id)
 );
+
+CREATE TABLE employees
+(
+    id INT PRIMARY KEY,
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    role_id INT,
+    FOREIGN KEY (roleid)
+    REFERENCES role(id),
+    managerid INT NULL,
+    FOREIGN KEY (managerid)
+    REFERENCES employee(id) 
+    ON DELETE CASCADE
+);   
