@@ -65,7 +65,6 @@ function letsStart() {
     }
     )
   }
-
   
 letsStart() 
 function viewAllDepartments() {
@@ -270,5 +269,3 @@ db.query("SELECT * FROM employee", (err, res) => {
     });
 });
 } 
-  
-  letsStart()  
