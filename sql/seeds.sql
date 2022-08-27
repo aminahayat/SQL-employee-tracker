@@ -8,7 +8,7 @@ VALUES
     ('IT'),
     ('Finance');
 
-INSERT INTO role
+INSERT INTO roles
     (title, salary, departmentid)
 VALUES
     ('Sales Consultant', 20000, 1),
@@ -20,8 +20,8 @@ VALUES
     ('Auditor', 37000, 4),
     ('Accountant', 24000, 4);
 
-INSERT INTO employee
-    (firstname, lastname, roleid, managerid)
+INSERT INTO employees
+    (first_name, last_name, role_id, managerid)
 VALUES
     ('Donald', 'Duck', 1, NULL),
     ('Mickey', 'Mouse', 2, 1),

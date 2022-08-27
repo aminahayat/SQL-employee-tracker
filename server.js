@@ -1,4 +1,6 @@
 const { prompt } = require("inquirer");
+const inquirer = require("inquirer");
+//const db = require("./db/connection");
 
 function letsStart() {
   prompt([
@@ -268,4 +270,4 @@ db.query("SELECT * FROM employee", (err, res) => {
     })
     });
 });
-} 
+}
