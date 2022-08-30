@@ -11,23 +11,23 @@ VALUES
 INSERT INTO roles
     (title, salary, departmentid)
 VALUES
-    ('Sales Consultant', 20000, 1),
-    ('Sales Representative', 30000, 1),
-    ('Barristor', 60000, 2),
-    ('Solicitor', 70000, 2),
-    ('Scrum Master', 85000, 3),
-    ('Software Engineer', 75000, 3),
-    ('Auditor', 37000, 4),
-    ('Accountant', 24000, 4);
+    ('Sales Consultant', 50000, 1),
+    ('Sales Representative', 40000, 1),
+    ('Legal Advisor', 60000, 2),
+    ('Lawyer', 70000, 2),
+    ('Scrum Master', 55000, 3),
+    ('Software Engineer', 45000, 3),
+    ('Auditor', 35000, 4),
+    ('Accountant', 26000, 4);
 
 INSERT INTO employees
     (first_name, last_name, role_id, managerid)
 VALUES
-    ('Donald', 'Duck', 1, NULL),
+    ('Luca', 'Terry', 1, NULL),
     ('Mickey', 'Mouse', 2, 1),
     ('Spongebob', 'SquarePants', 3, NULL),
     ('Patrick', 'Star', 4, 3),
     ('Squidward', 'Tentacles', 5, NULL),
     ('Homer', 'Simpson', 6, 5),
-    ('Ned', 'Flanders', 7, NULL),
+    ('Eloisa', 'Bush', 7, NULL),
     ('Peppa', 'Pig', 8, 7);  
