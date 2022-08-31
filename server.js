@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const { prompt } = require("inquirer");
-const db = require("./db/connection");
+const db = require("./db/connections");
 require("console.table");
 
 function letsStart() {
@@ -78,18 +78,21 @@ function viewAllDepartments() {
   });
   letsStart();
 }
+
 function viewAllRoles() {
   db.query("SELECT * FROM role", (err, res) => {
     console.table(res);
   });
   letsStart();
 }
+
 function viewAllEmployees() {
   db.query("SELECT * FROM employee", (err, res) => {
     console.table(res);
   });
   letsStart();
 }
+
 function addDepartment() {
   prompt([
     {
@@ -110,20 +113,26 @@ function addDepartment() {
     letsStart();
   });
 }
+
 function addNewRole() {
   let departmentID = [];
   let departmentName = [];
   db.query("SELECT * FROM department", (err, res) => {
     if (err) throw err;
+
     res.forEach(({ id }) => {
       departmentID.push(id);
     });
+
     res.forEach(({ name }) => {
       departmentName.push(name);
     });
     addRole(departmentID, departmentName);
+    
   });
+  
 }
+
 function addRole(departmentID, departmentName) {
   let id = "";
   prompt([
@@ -157,14 +166,20 @@ function addRole(departmentID, departmentName) {
         if (err) throw err;
         console.log("Role has been added");
       }
+      
     );
     letsStart();
+  
   });
+  
 }
+
 function addEmployee() {
   let addNewRoles = [];
+
   db.query("SELECT * FROM role", (err, res) => {
     if (err) throw err;
+
     addNewRole = res.map((role) => {
       return {
         name: role.title,
@@ -203,31 +218,39 @@ function addEmployee() {
           [answers.first_name, answers.last_name, answers.role_id, answers.manager],
           (err, res) => {
             if (err) throw err;
+
             console.log('Added a new employee!');
           }
         );
         letsStart();
       });
+      
   });
 }
+
 function updateEmployeeRole() {
   const roleData = [];
+
   db.query("SELECT * FROM role", (err, result) => {
     if (err) throw err;
+
     const roleData = result.map((role) => {
       return {
         name: role.title,
         value: role.id,
       };
     });
+
     db.query("SELECT * FROM employee", (err, res) => {
       if (err) throw err;
+
       const employeeData = res.map((employee) => {
         return {
           name: `${employee.first_name} ${employee.last_name}`,
           value: employee.id,
         };
       });
+
       inquirer
         .prompt([
           {
@@ -252,11 +275,18 @@ function updateEmployeeRole() {
             [res.role, res.employee],
             (err, res) => {
               if (err) throw err;
+
               console.log('Employee role updated!');
               letsStart();
             }
+
           );
+       
+
         })
+      
         });
+      
     });
+    
 }

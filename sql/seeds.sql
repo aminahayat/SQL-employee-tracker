@@ -1,4 +1,4 @@
-use employee_db;
+use employees_db;
 
 INSERT INTO department
     (name)
@@ -8,26 +8,26 @@ VALUES
     ('IT'),
     ('Finance');
 
-INSERT INTO roles
-    (title, salary, departmentid)
+INSERT INTO role
+    (title, salary, department_id)
 VALUES
     ('Sales Consultant', 50000, 1),
     ('Sales Representative', 40000, 1),
     ('Legal Advisor', 60000, 2),
     ('Lawyer', 70000, 2),
-    ('Scrum Master', 55000, 3),
+    ('IT Project Manager', 55000, 3),
     ('Software Engineer', 45000, 3),
     ('Auditor', 35000, 4),
     ('Accountant', 26000, 4);
 
-INSERT INTO employees
-    (first_name, last_name, role_id, managerid)
+INSERT INTO employee
+    (first_name, last_name, role_id, manager_id)
 VALUES
     ('Luca', 'Terry', 1, NULL),
-    ('Mickey', 'Mouse', 2, 1),
-    ('Spongebob', 'SquarePants', 3, NULL),
-    ('Patrick', 'Star', 4, 3),
-    ('Squidward', 'Tentacles', 5, NULL),
-    ('Homer', 'Simpson', 6, 5),
-    ('Eloisa', 'Bush', 7, NULL),
-    ('Peppa', 'Pig', 8, 7);  
+    ('Darius', 'Stubbs', 2, 1),
+    ('Makayla', 'Grimes', 3, NULL),
+    ('Olivia', 'Hood', 4, 3),
+    ('Raihan', 'Workman', 5, NULL),
+    ('Bryan', 'Cherry', 6, 5),
+    ('Ryley', 'Cresswell', 7, NULL),
+    ('Eloisa', 'Bush', 8, 7);

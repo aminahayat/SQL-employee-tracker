@@ -3,13 +3,13 @@ const mysql = require('mysql2');
 const db = mysql.createConnection(
     {
       host: 'localhost',
-      // mySQL Username
+      // MySQL username,
       user: 'root',
-      // mySQL Password
+      // MySQL password
       password: 'password',
-      database: 'employeedb'
+      database: 'employees_db'
     },
     console.log(`Connected to the classlist_db database.`)
   );
 
-  module.exports = db;  
+  module.exports = db;
