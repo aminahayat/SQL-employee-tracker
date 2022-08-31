@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const { prompt } = require("inquirer");
-const db = require("./db/connections");
+const db = require("./db/connection");
 require("console.table");
 
 function letsStart() {
