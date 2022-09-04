@@ -16,7 +16,7 @@ An employee management system which enable users to use CLI to view and manage t
 
 # Usage
 
-node index.js
+node index.js.
 or
 npm run start
 
